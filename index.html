@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réserver une salle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menu -->
+  <header class="header">
+    <span class="brand">Réservation de salles</span>
+    <nav>
+      <a href="#" onclick="montrerPage('page-reserver')">Réserver</a>
+      <a href="#" onclick="montrerPage('page-liste')">Mes réservations</a>
+      <a href="#" onclick="montrerPage('page-aide')">Aide</a>
+    </nav>
+  </header>
+
+  <!-- Page 1 : réserver -->
+  <main id="page-reserver">
+    <h1>Réserver une salle</h1>
+    <p>Bienvenue ! Réservez en 4 étapes :  Date → Heures →  Salle → ✅ Réserver</p>
+
+    <div class="carte">
+      <label>Date</label>
+      <input type="date" id="date">
+
+      <label>🕐 Heure de début</label>
+      <select id="debut">
+          <option value="">Choisir</option>
+          <option>07:00</option>
+          <option>08:00</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+          <option>13:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+          <option>18:00</option>
+          <option>19:00</option>
+          <option>20:00</option>
+      </select>
+
+      <label> Heure de fin</label>
+      <select id="fin">
+          <option value="">Choisir</option>
+          <option>08:00</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+          <option>13:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+          <option>18:00</option>
+          <option>19:00</option>
+          <option>20:00</option>
+          <option>21:00</option>
+          <option>22:00</option>
+      </select>
+
+      <label> Salle</label>
+      <select id="salle">
+          <option value="">Choisir</option>
+          <option>Salle A101</option>
+          <option>Salle A102</option>
+          <option>Salle B204</option>
+          <option>Salle B205</option>
+          <option>Salle C310</option>
+          <option>Salle C311</option>
+          <option>Laboratoire L120</option>
+          <option>Laboratoire L121</option>
+          <option>Salle de conférence D400</option>
+          <option>Salle de réunion D401</option>
+          <option>Amphithéâtre E001</option>
+          <option>Salle d'étude F210</option>
+      </select>
+
+      <button onclick="reserver()">Réserver</button>
+      <p id="message"></p>
+    </div>
+  </main>
+
+  <!-- Page 2 : mes réservations -->
+  <main id="page-liste" class="cache">
+    <h1>Mes réservations</h1>
+    <div class="carte">
+      <p id="vide">📭 Vous n'avez pas encore de réservation. Cliquez sur « Réserver » dans le menu pour commencer.</p>
+      <ul id="liste"></ul>
+    </div>
+  </main>
+
+  <!-- Page 3 : aide -->
+  <main id="page-aide" class="cache">
+    <h1>Aide</h1>
+    <div class="carte aide">
+      <h3>Comment réserver ?</h3>
+      <p>Choisissez une date, les heures et une salle, puis cliquez sur « Réserver ».</p>
+      <h3>J'ai un message rouge, que faire ?</h3>
+      <p>Le message vous dit quel champ remplir ou corriger.</p>
+      <h3>Comment annuler ?</h3>
+      <p>Dans « Mes réservations », cliquez sur « Annuler ».</p>
+    </div>
+  </main>
+
+  <script src="reservation.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "reservation-salle",
+  "version": "1.0.0",
+  "description": "Page web pour réserver une salle (SED2515)",
+  "scripts": {
+    "test": "node --test tests/reservation.test.js"
+  }
+}

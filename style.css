@@ -1,0 +1,89 @@
+/* Pourcentage de code écrit par moi-même : 50 % */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f3ff;
+  text-align: center;
+}
+
+/* Menu en haut */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+}
+
+.brand {
+  font-weight: bold;
+  color: #2d1b69;
+}
+
+nav a {
+  margin-left: 15px;
+  color: #6a11cb;
+  text-decoration: none;
+}
+
+h1 {
+  color: #6a11cb;
+}
+
+/* Pour cacher une page */
+.cache {
+  display: none;
+}
+
+/* Boîte blanche */
+.carte {
+  background: white;
+  width: 320px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+  color: #2575fc;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #e3dcf5;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #6a11cb;
+  color: white;
+  cursor: pointer;
+}
+
+#message {
+  font-weight: bold;
+}
+
+/* Liste et page d'aide alignées à gauche */
+#liste, .aide {
+  text-align: left;
+}
+
+/* Sur téléphone */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+  .carte {
+    width: 85%;
+  }
+}
